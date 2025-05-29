@@ -1,0 +1,226 @@
+/* ===== Base Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* ===== Layout Utilities ===== */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ===== Header ===== */
+  .header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: crimson;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: crimson;
+  }
+  .hero {
+    position: relative;
+    background: linear-gradient(to bottom right, #fff, #f9f9f9);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/banner.jpg') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    color: crimson;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    color: #222;
+  }
+  
+  .hero .tagline {
+    font-style: italic;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .cta-button {
+    background-color: crimson;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #a40000;
+  }
+  
+  
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* ===== Page Heading Section ===== */
+  .page-heading {
+    background: #f9f9f9;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 2px solid crimson;
+  }
+  
+  .page-heading h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-heading p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* ===== About Section ===== */
+  .about-section {
+    padding: 3rem 0;
+  }
+  
+  .about-section h2 {
+    color: crimson;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .about-section p,
+  .about-section ul {
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+  }
+  
+  .about-section ul {
+    list-style: disc;
+    padding-left: 2rem;
+  }
+  
+  /* ===== Footer ===== */
+  .footer {
+    background: #111;
+    color: #eee;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-nav {
+    margin-top: 1rem;
+  }
+  
+  .footer-nav a {
+    margin: 0 1rem;
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    color: crimson;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
